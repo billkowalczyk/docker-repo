@@ -1,0 +1,7 @@
+extends layout
+
+block content
+    h1= title
+    p Welcome to #{title}. Enter a Zip Code:
+    form(action='/weather' method='post')
+        input(name='zipCode')/

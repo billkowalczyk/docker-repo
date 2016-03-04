@@ -1,0 +1,10 @@
+extends layout
+
+block content
+    h1 #{name} Weather
+    h2 Current temp: #{Math.round(main.temp * (9/5) - 459.67)}°F
+    div
+        h1= title
+        p Enter another Zip Code if you want:
+        form(action='/weather' method='post')
+            input(name='zipCode')/
